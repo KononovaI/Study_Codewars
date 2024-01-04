@@ -7,3 +7,8 @@ function removeChar(str){
     strAsArray.splice(-1,1); // Here can be used pop() as well. It delete last element of the array
   return strAsArray.join("");
 };
+
+/* Shorter solution can be in reverse view (nevis dzēšam pirmo un pēdējo char, bet izgriežam viduci)
+function removeChar(str) {
+  return str.slice(1, -1);
+} */
