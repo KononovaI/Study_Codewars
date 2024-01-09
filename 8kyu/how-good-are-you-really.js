@@ -10,10 +10,13 @@ Your points are not included in the array of your class's points. For calculatin
 
 // Solution:
 function betterThanAverage(classPoints, yourPoints) {
-  let allPointsArr = classPoints.concat(yourPoints);
-  let summOfAllPoints = allPointsArr.reduce(function(total, current) {
+  let allPointsArr = classPoints.concat(yourPoints); // Concate all points in one array
+  // Calculate the count of all points:
+	let summOfAllPoints = allPointsArr.reduce(function(total, current) {
   return current + total;
   }, 0);
+	//Calculate the score:
   let calculateScore = summOfAllPoints / allPointsArr.length;
+	// Compare your's points and calculated score, return the result:
   return yourPoints > calculateScore ? true : false;
 }
