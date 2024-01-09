@@ -7,12 +7,14 @@ For example (Input -> Output):
 
 // Solution:
 var summation = function (num) {
-	let arr = [num];
+	let arr = [num]; // Create an array with value, what is similar to the fiven number (otherwhise it would be missing in reduce() step)
 	
+	// With while loop iterate through the given number till number 1:
 	 while ( num > 1) {
 		 num = num - 1;
-		 arr.push(num);
+		 arr.push(num); // And add all resulting numbers into arr.
 	}
+	// reduce() methode helps to sum all numbers from resulting array:
 	 return arr.reduce(function(totalSum, currentNum) {
 		 return totalSum + currentNum
 	 }, 0);
