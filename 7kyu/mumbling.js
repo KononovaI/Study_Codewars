@@ -8,16 +8,16 @@ The parameter of accum is a string which includes only letters from a..z and A..
 
 // Solution:
 function accum(s) {
-	let sArr = s.toLowerCase().split("");
+	let sArr = s.toLowerCase().split(""); // Get all characters as lower cases and split to get the array
   
-  let newArr = [];
+  let newArr = []; // Define blank array for next actions
   for (i = 0; i < sArr.length; i++) {
-    newArr.push(sArr[i].repeat(i+1));
+    newArr.push(sArr[i].repeat(i+1)); // Fulfill an empty array with strings repeated the appropriate number of times
   };
   
   let resultArr = newArr.map((str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    return str.charAt(0).toUpperCase() + str.slice(1); // Change the first character of the string to upper case
   });
   
-  return resultArr.join("-");
+  return resultArr.join("-"); // Merge the resulting array
 }
