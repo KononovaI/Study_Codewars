@@ -10,10 +10,10 @@ For an input String: "hey You, Sort me Already!" the function should return: "Yo
 function capitalsFirst(str){
   let strArr = str.split(" ");
   let onlyUpper = strArr.filter( (word) => {
-    return word[0] === word[0].toUpperCase();
+    return word[0] === word[0].toUpperCase() && !/^[!@'=#+0-9]$/.test(word[0]); // Corrected and included RegEx otherwise didn't meet condition "If a word starts with a number or special character, skip the word and leave it out of the result."
   });
   let onlyLower = strArr.filter( (word) => {
-    return word[0] === word[0].toLowerCase();
+    return word[0] === word[0].toLowerCase() && !/^[!@'=#+0-9]$/.test(word[0]); // Corrected and included RegEx otherwise didn't meet condition "If a word starts with a number or special character, skip the word and leave it out of the result.";
   });
   let result = onlyUpper.concat(onlyLower);
     return result.join(" ");
