@@ -21,3 +21,14 @@ function sumArray(array) {
   }
   return result;
 }
+
+/* Shorter solution:
+function sumArray(array) {
+  let result;
+  if (Array.isArray(array) && array.length >2) {
+    result = array.reduce((a,b)=>a+b) - Math.min(...array) - Math.max(...array);
+  } else {
+    result = 0
+  }
+  return result;
+} */
