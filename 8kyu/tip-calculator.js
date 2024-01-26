@@ -19,21 +19,22 @@ function calculateTip(amount, rating) {
   let result;
   switch (rating.toUpperCase()) {
       case 'TERRIBLE':
-        result = 0;
+        return 0;
         break;
       case 'POOR':
-        result = amount * 0.05;
+        return Math.ceil(amount * 0.05);
         break;
       case 'GOOD':
-        result = amount * 0.1;
+        return Math.ceil(amount * 0.1);
         break;
       case 'GREAT':
-        result = amount * 0.15;
+        return Math.ceil(amount * 0.15);
         break;
       case 'EXCELLENT':
-        result = amount * 0.2;
+       return Math.ceil(amount * 0.2);
         break;
-      default: console.log("Rating not recognised");
+      default: 
+      return "Rating not recognised";
   }
-  return Math.ceil(result);
+  
 }
