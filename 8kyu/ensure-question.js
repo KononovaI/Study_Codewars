@@ -9,3 +9,9 @@ For example (Input --> Output)
 function ensureQuestion(s) {
   return s.charAt(s.length -1) === "?" ? s : s + "?";
 }
+
+/* Shorter solution:
+function ensureQuestion(s) {
+  // Code here
+  return s.includes("?") ? s : s + "?";
+} */
