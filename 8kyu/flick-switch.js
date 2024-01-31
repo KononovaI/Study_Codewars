@@ -27,3 +27,12 @@ function flickSwitch(arr){
   }
   return arr;
 }
+
+/* Shorter solution:
+function flickSwitch(arr){
+	let boolean = true;
+	let result = arr.map( (item) => {
+		return (item === "flick") ? boolean = !boolean : boolean;
+	})
+	return result;
+} */
