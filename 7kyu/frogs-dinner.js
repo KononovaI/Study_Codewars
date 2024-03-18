@@ -48,3 +48,43 @@ let resultCat = numCat(nForCat);
   
   return  `Chris ate ${resultCris} flies, Tom ate ${resultTom} flies and Cat ate ${resultCat} flies`;
 }
+/* 
+Shorter solution (uses only 1 function):
+function frogContest(n) {
+ 
+  function fliesCalculation(param) {
+  let array = [];
+  for (let i=0; i<param; i++) {
+    array.push(i+1);
+   };
+  return array.reduce((a,b) => a + b);
+ };
+  
+  let resultCris = fliesCalculation(n);
+  
+  let nForTom = Math.floor(resultCris / 2);
+  let resultTom = fliesCalculation(nForTom);
+ 
+  let nForCat = resultCris + resultTom;
+  let resultCat = fliesCalculation(nForCat);
+  
+  return  `Chris ate ${resultCris} flies, Tom ate ${resultTom} flies and Cat ate ${resultCat} flies`;
+} */
+
+/* Replace for with a common technique to calculate the sum of an arithmetic series:
+function frogContest(n) {
+ 
+  function fliesCalculation(param) {
+    return param * (param + 1) /2;
+ };
+  
+  let resultCris = fliesCalculation(n);
+  
+  let nForTom = Math.floor(resultCris / 2);
+  let resultTom = fliesCalculation(nForTom);
+ 
+  let nForCat = resultCris + resultTom;
+  let resultCat = fliesCalculation(nForCat);
+  
+  return  `Chris ate ${resultCris} flies, Tom ate ${resultTom} flies and Cat ate ${resultCat} flies`;
+} */
