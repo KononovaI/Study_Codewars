@@ -20,3 +20,11 @@ Explanation:
 function minValue(values){
   return parseInt([...new Set(values)].sort((a,b)=>a-b).join(""));
 }
+
+/* There is possible to use the method filter() and indexOf to solve this exercise:
+function minValue(values){
+  let result = values.filter((value, index, self) => {
+    return self.indexOf(value) === index;
+    });
+  return result.sort((a,b)=>a-b).join("");
+} */
