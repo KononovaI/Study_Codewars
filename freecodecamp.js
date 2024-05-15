@@ -39,19 +39,22 @@ const recordCollection = {
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-  if(value === "") { // Izpilda pirmo nosacījumu "If value is an empty string, delete the given prop property from the album."
+  if (value === "") {
+    // Izpilda pirmo nosacījumu "If value is an empty string, delete the given prop property from the album."
     delete records[id][prop]; // Objekta propertija dzēšanas darbība
-  } else if (prop !== "tracks") { // Vairs neminam "value isn't an empty string", jo tas pašsaprotami izriet no tā, ka pirmajā nosacījumā "is empty" un te ir otrs nosacījums else if konstrukcijā (tātad paredz, ka šeit izpildās, ja ir pretējs pirmajam nosacījumam)
+  } else if (prop !== "tracks") {
+    // Vairs neminam "value isn't an empty string", jo tas pašsaprotami izriet no tā, ka pirmajā nosacījumā "is empty" un te ir otrs nosacījums else if konstrukcijā (tātad paredz, ka šeit izpildās, ja ir pretējs pirmajam nosacījumam)
     records[id][prop] = value; // Mainam esošā propertija value, ja šis propertijs nav "tracks"
   } else {
-    if (!records[id].hasOwnProperty("tracks")) { // Ja maināmais albums vispār nesatur propertiju "tracks", tad izveidojam šo propertiju un piešķiram tam tukšu [] kā value (savādāk leks kļūda, jo nevar iepušot value, ja nav masīva), kā arī iepušojam tajā value.
+    if (!records[id].hasOwnProperty("tracks")) {
+      // Ja maināmais albums vispār nesatur propertiju "tracks", tad izveidojam šo propertiju un piešķiram tam tukšu [] kā value (savādāk leks kļūda, jo nevar iepušot value, ja nav masīva), kā arī iepušojam tajā value.
       records[id][prop] = [];
       records[id][prop].push(value);
     } else {
-    records[id][prop].push(value); // Un, savukārt, ja maināmais albums satur peopertiju : tracks, tad uzreiz iepušojam tajā value.
+      records[id][prop].push(value); // Un, savukārt, ja maināmais albums satur peopertiju : tracks, tad uzreiz iepušojam tajā value.
     }
   }
-   return records;
+  return records;
 }
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
