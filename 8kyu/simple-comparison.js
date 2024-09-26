@@ -12,3 +12,8 @@ function add(a, b){
     }
     return false;
 }
+
+/* Shorter solution :)
+function add(a, b){
+	return a == b 
+} */
