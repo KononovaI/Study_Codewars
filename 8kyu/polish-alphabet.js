@@ -36,3 +36,25 @@ function correctPolishLetters (string) {
   return result;
 }
 
+/* Other correct solution with "map":
+function correctPolishLetters (string) {
+  const letters = {
+  ą: "a",
+  ć: "c",
+  ę: "e",
+  ł: "l",
+  ń: "n",
+  ó: "o",
+  ś: "s",
+  ź: "z",
+  ż: "z"
+}
+  let result = string
+		.split("")
+		.map(char => letters[char] || char) // Replace if exists in letters, else keep original
+  	.join("");
+  }
+  return result;
+}
+
+*/
