@@ -63,20 +63,23 @@ function correctPolishLetters (string) {
 
 let string = "βιολογία";
 const letters = {
-  α: "a",
-  β: "b",
-  γ: "g",
-  δ: "d",
-  ε: "e",
-  λ: "l",
-  π: "p",
-  σ: "s",
-  φ: "f",
-  ω: "o",
-  ι: "i"
+  "α": "a",
+  "β": "b",
+  "γ": "g",
+  "δ": "d",
+  "ε": "e",
+  "λ": "l",
+  "π": "p",
+  "σ": "s",
+  "φ": "f",
+  "ω": "o",
+  "ι": "i"
 }
 let result = "";
 for (let i = 0; i < string.length; i++) {
   result += letters[string[i]] || string[i];
 }
-console.log(result === "biοlοgίa") */
+console.log(result === "biοlοgίa") 
+
+
+BUT better is to use "" for keys as well! otherwhise may be the gap*/
