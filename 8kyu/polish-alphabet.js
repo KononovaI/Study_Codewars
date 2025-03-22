@@ -58,3 +58,25 @@ function correctPolishLetters (string) {
 }
 
 */
+
+/* Additional training with similar excersise from ChatGPT:
+
+let string = "βιολογία";
+const letters = {
+  α: "a",
+  β: "b",
+  γ: "g",
+  δ: "d",
+  ε: "e",
+  λ: "l",
+  π: "p",
+  σ: "s",
+  φ: "f",
+  ω: "o",
+  ι: "i"
+}
+let result = "";
+for (let i = 0; i < string.length; i++) {
+  result += letters[string[i]] || string[i];
+}
+console.log(result === "biοlοgίa") */
